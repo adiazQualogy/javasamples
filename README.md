@@ -2,6 +2,8 @@
 
 ## Java 9 React API 
 
+Run the ReactSample class and follow the instructions
+
 ## Rest Api based on Wildfly Swarm and Microprofile
 Run mvn wildfly-swarm:run
 
