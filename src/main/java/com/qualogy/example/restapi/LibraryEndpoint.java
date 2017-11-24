@@ -24,9 +24,15 @@ public class LibraryEndpoint {
   @Path("/library")
   public Response getAllBooks() {
     List<Book> resource = new ArrayList<>();
-    resource.add(new BookBuilder().withName("The Neverending Story").withIsbn("0140386335").withAuthor("Michael Ende").build());
-    resource.add(new BookBuilder().withName("Elon Musk. Tesla, SpaceX, and the Quest for a Fantastic Future").withIsbn("0062469673").withAuthor("Ashlee Vance").build());
-    resource.add(new BookBuilder().withName("The Lord of the Rings").withIsbn("0007525540").withAuthor("J.R.R. Tolkien").build());
+
+    resource.add(new BookBuilder().withName("The Neverending Story")
+                                  .withIsbn("0140386335").withAuthor("Michael Ende").build());
+
+    resource.add(new BookBuilder().withName("Elon Musk. Tesla, SpaceX, and the Quest for a Fantastic Future")
+                                  .withIsbn("0062469673").withAuthor("Ashlee Vance").build());
+
+    resource.add(new BookBuilder().withName("The Lord of the Rings")
+                                  .withIsbn("0007525540").withAuthor("J.R.R. Tolkien").build());
     return Response.ok(resource).build();
   }
 
@@ -34,7 +40,8 @@ public class LibraryEndpoint {
   @Produces(MediaType.APPLICATION_JSON)
   @Path("/library/{id}")
   public Response getBook(@PathParam("id") String id) {
-    Book book = new BookBuilder().withName("The Lord of the Rings").withIsbn("0007525540").withAuthor("J.R.R. Tolkien").build();
+    Book book = new BookBuilder().withName("The Lord of the Rings")
+                                 .withIsbn("0007525540").withAuthor("J.R.R. Tolkien").build();
     return Response.status(Response.Status.OK).entity(book).build();
   }
 
