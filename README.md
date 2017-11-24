@@ -6,9 +6,9 @@ Run mvn wildfly-swarm:run
 Go to http://localhost:8080
 
 ### Available end points
-http://localhost:8080/rest/foo
+GET http://localhost:8080/rest/foo
 
-http://localhost:8080/rest/weather
+GET http://localhost:8080/rest/weather
 (producing both JSON and plain text)
 
 GET http://localhost:8080/rest/library
